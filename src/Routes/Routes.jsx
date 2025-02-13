@@ -6,6 +6,7 @@ import Dashboard from "../Layout/Dashboard";
 import AllUsers from "../pages/AllUsers/AllUsers";
 import AdminRoute from "./AdminRoute";
 import PrivateRoute from "./PrivateRoute";
+import CreateTemplate from "../pages/Templates/CreateTemplate";
 
 export const router = createBrowserRouter([
     {
@@ -32,6 +33,10 @@ export const router = createBrowserRouter([
         {
           path: 'users',
           element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
+        },
+        {
+          path:'createTemplate',
+          element:<CreateTemplate></CreateTemplate>
         }
 
       ]
