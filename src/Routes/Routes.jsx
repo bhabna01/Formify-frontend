@@ -7,12 +7,19 @@ import AllUsers from "../pages/AllUsers/AllUsers";
 import AdminRoute from "./AdminRoute";
 import PrivateRoute from "./PrivateRoute";
 import CreateTemplate from "../pages/Templates/CreateTemplate";
+import FillTemplateForm from "../pages/Templates/FillTemplateForm";
+import TemplateGallery from "../pages/Templates/TemplateGallery";
+
 
 export const router = createBrowserRouter([
     {
       path: "/",
       element: <Main></Main>,
       children: [
+        {
+          path:'/',
+          element:<TemplateGallery></TemplateGallery>
+        },
         {
           path: 'login',
           element: <Login></Login>
@@ -37,6 +44,12 @@ export const router = createBrowserRouter([
         {
           path:'createTemplate',
           element:<CreateTemplate></CreateTemplate>
+        },
+        {
+          path:'templates/:templateId',
+          element:<FillTemplateForm></FillTemplateForm>,
+         
+
         }
 
       ]
