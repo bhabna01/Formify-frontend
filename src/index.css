@@ -1,2 +1,12 @@
 @import "tailwindcss";
 @plugin "daisyui";
+/* Light Mode (default) */
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Mode */
+.dark {
+    background-color: #1a202c;
+   
+}

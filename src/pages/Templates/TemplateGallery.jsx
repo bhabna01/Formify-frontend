@@ -33,9 +33,9 @@ const TemplateGallery = () => {
           templates.map((template) => (
             <div
               key={template.id}
-              className="card bg-white shadow-lg rounded-lg p-4 border"
+              className="card bg-white shadow-lg rounded-lg p-4 border  dark:bg-gray-900"
             >
-              <h3 className="text-xl font-bold mb-2">{template.title}</h3>
+              <h3 className="text-xl font-bold mb-2 dark:text-gray-50">{template.title}</h3>
               <p className="text-gray-600">{template.description}</p>
               <p className="text-sm text-gray-500 mt-2">
                 Topic: <span className="font-semibold">{template.topic}</span>
