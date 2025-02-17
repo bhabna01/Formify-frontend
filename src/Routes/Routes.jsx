@@ -9,6 +9,7 @@ import PrivateRoute from "./PrivateRoute";
 import CreateTemplate from "../pages/Templates/CreateTemplate";
 import FillTemplateForm from "../pages/Templates/FillTemplateForm";
 import TemplateGallery from "../pages/Templates/TemplateGallery";
+import ReviewSubmissions from "../pages/Templates/ReviewSubmissions";
 
 
 export const router = createBrowserRouter([
@@ -48,8 +49,10 @@ export const router = createBrowserRouter([
         {
           path:'templates/:templateId',
           element:<FillTemplateForm></FillTemplateForm>,
-         
-
+        },
+        {
+          path:'reviewSubmissions',
+          element:<ReviewSubmissions></ReviewSubmissions>
         }
 
       ]

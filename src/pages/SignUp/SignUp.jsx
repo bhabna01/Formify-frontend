@@ -12,59 +12,8 @@ const SignUp = () => {
     const axiosPublic = useAxiosPublic();
     const navigate = useNavigate();
 
-    // const onSubmit = data => {
-    //     console.log(data);
-    //     createUser(data.email, data.password)
-    //         .then(result => {
-    //             const loggedUser = result.user;
-    //             console.log(loggedUser);
-    //             updateUserProfile(data.name, data.photoURL)
-    //                 .then(() => {
-    //                     console.log('user profile info updated')
-    //                     reset();
-    //                     Swal.fire({
-    //                         position: 'top-end',
-    //                         icon: 'success',
-    //                         title: 'User created successfully.',
-    //                         showConfirmButton: false,
-    //                         timer: 1500
-    //                     });
-    //                     navigate('/');
-
-    //                 })
-    //                 .catch(error => console.log(error))
-    //         })
-    // };
-    // const onSubmit = async (data) => {
-    //     try {
-    //         const result = await createUser(data.email, data.password);
-    //         const loggedUser = result.user;
-    //         console.log(loggedUser);
     
-    //         await updateUserProfile(data.name, data.photoURL);
-    //         console.log("User profile info updated");
-    
-    //         reset();
-    //         Swal.fire({
-    //             position: "top-end",
-    //             icon: "success",
-    //             title: "User created successfully.",
-    //             showConfirmButton: false,
-    //             timer: 1500,
-    //         });
-    
-    //         navigate("/");
-    //     } catch (error) {
-    //         console.error("Error:", error.message);
-            
-    //         // Display the error to the user
-    //         Swal.fire({
-    //             icon: "error",
-    //             title: "Oops...",
-    //             text: error.message,
-    //         });
-    //     }
-    // };
+   
     const onSubmit = data => {
 
         createUser(data.email, data.password)
@@ -168,7 +117,7 @@ const SignUp = () => {
                                 <input className="btn btn-primary" type="submit" value="Sign Up" />
                             </div>
                         </form>
-                        <p><small>Already have an account <Link to="/login">Login</Link></small></p>
+                        <p><small>Already have an account? <Link to="/login" className="text-blue-500">Login</Link></small></p>
                     </div>
                 </div>
             </div>

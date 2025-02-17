@@ -1,0 +1,18 @@
+{
+    "welcome": "Bienvenido",
+    "Login": "Iniciar sesión",
+    "Logout": "Cerrar sesión",
+    "register": "Registrarse",
+    "templates": "Plantillas",
+    "create_template": "Crear plantilla",
+    "my_templates": "Mis plantillas",
+    "settings": "Configuraciones",
+    "language": "Idioma",
+    "dark_mode": "Modo oscuro",
+    "light_mode": "Modo claro",
+    "search_placeholder": "Buscar plantillas...",
+    "theme": "Tema",
+    "home": "Inicio",
+    "profile": "Perfil"
+  }
+  

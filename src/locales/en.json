@@ -1,0 +1,17 @@
+{
+    "welcome": "Welcome",
+    "Login": "Login",
+    "Logout": "Logout",
+    "register": "Register",
+    "templates": "Templates",
+    "create_template": "Create Template",
+    "my_templates": "My Templates",
+    "settings": "Settings",
+    "language": "Language",
+    "dark_mode": "Dark Mode",
+    "light_mode": "Light Mode",
+    "search_placeholder": "Search templates...",
+    "theme": "Theme",
+    "home": "Home",
+    "profile": "Profile"
+  }

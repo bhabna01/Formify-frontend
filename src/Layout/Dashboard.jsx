@@ -95,7 +95,7 @@
 
 import { NavLink, Outlet } from "react-router-dom";
 import useAdmin from "../hooks/useAdmin";
-import { FaUserShield, FaUser, FaFileAlt, FaClipboardList, FaUsers, FaComments, FaSignOutAlt, FaHome } from "react-icons/fa";
+import { FaUserShield, FaUser, FaFileAlt, FaClipboardList, FaUsers, FaComments, FaSignOutAlt, FaHome, FaCheckSquare } from "react-icons/fa";
 
 const Dashboard = () => {
     const [isAdmin] = useAdmin();
@@ -139,6 +139,12 @@ const Dashboard = () => {
                                         Review Comments
                                     </NavLink>
                                 </li>
+                                <li>
+                <NavLink to="/dashboard/reviewSubmissions">
+                    <FaCheckSquare />
+                    Review Submissions
+                </NavLink>
+            </li>
                             </>
                         ) : (
                             <>
