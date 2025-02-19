@@ -15,6 +15,8 @@ const ThemeProvider = ({ children }) => {
         // Save theme preference in localStorage
         localStorage.setItem("theme", theme);
     }, [theme]);
+    
+      
 
     // Function to toggle the theme
     const toggleTheme = () => {

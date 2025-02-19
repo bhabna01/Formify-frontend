@@ -12,6 +12,7 @@ import TemplateGallery from "../pages/Templates/TemplateGallery";
 import ReviewSubmissions from "../pages/Templates/ReviewSubmissions";
 
 
+
 export const router = createBrowserRouter([
     {
       path: "/",
@@ -19,7 +20,7 @@ export const router = createBrowserRouter([
       children: [
         {
           path:'/',
-          element:<TemplateGallery></TemplateGallery>
+          element:<TemplateGallery> </TemplateGallery>
         },
         {
           path: 'login',
