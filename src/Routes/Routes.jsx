@@ -10,6 +10,7 @@ import CreateTemplate from "../pages/Templates/CreateTemplate";
 import FillTemplateForm from "../pages/Templates/FillTemplateForm";
 import TemplateGallery from "../pages/Templates/TemplateGallery";
 import ReviewSubmissions from "../pages/Templates/ReviewSubmissions";
+import ManageTemplate from "../pages/Templates/ManageTemplate";
 
 
 
@@ -54,6 +55,10 @@ export const router = createBrowserRouter([
         {
           path:'reviewSubmissions',
           element:<ReviewSubmissions></ReviewSubmissions>
+        },
+        {
+          path:'manageTemplates',
+          element:<ManageTemplate></ManageTemplate>
         }
 
       ]
