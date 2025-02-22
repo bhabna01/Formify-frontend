@@ -38,10 +38,12 @@
 /* Light Mode (default) */
 body {
     transition: background-color 0.3s, color 0.3s;
+    color: black
 }
 
 /* Dark Mode */
 .dark {
     background-color: #1a202c;
+    color:grey;
    
 }

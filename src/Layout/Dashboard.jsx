@@ -2,13 +2,16 @@
 
 import { NavLink, Outlet } from "react-router-dom";
 import useAdmin from "../hooks/useAdmin";
-import { FaUserShield, FaUser, FaFileAlt, FaClipboardList, FaUsers, FaComments, FaSignOutAlt, FaHome, FaCheckSquare } from "react-icons/fa";
+import { FaUserShield, FaUser, FaFileAlt, FaClipboardList, FaUsers, FaComments,  FaHome, FaCheckSquare } from "react-icons/fa";
+import Navbar from "../components/Navbar";
 
 const Dashboard = () => {
     const [isAdmin] = useAdmin();
 
     return (
-        <div className="flex">
+        <div className="flex flex-col min-h-screen">
+            <Navbar></Navbar>
+            <div className="flex flex-1 mt-16">
             {/* Dashboard Sidebar */}
             <div className="w-64 min-h-screen bg-base-300">
                 <ul className="menu p-4">
@@ -90,18 +93,14 @@ const Dashboard = () => {
                             Home
                         </NavLink>
                     </li>
-                    <li>
-                        <NavLink to="/logout">
-                            <FaSignOutAlt />
-                            Logout
-                        </NavLink>
-                    </li>
+                   
                 </ul>
             </div>
             {/* Dashboard Content */}
             <div className="flex-1 p-8">
                 <Outlet />
             </div>
+        </div>
         </div>
     );
 };

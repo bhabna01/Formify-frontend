@@ -11,6 +11,7 @@ import FillTemplateForm from "../pages/Templates/FillTemplateForm";
 import TemplateGallery from "../pages/Templates/TemplateGallery";
 import ReviewSubmissions from "../pages/Templates/ReviewSubmissions";
 import ManageTemplate from "../pages/Templates/ManageTemplate";
+import MainPage from "../pages/Templates/MainPage";
 
 
 
@@ -21,7 +22,8 @@ export const router = createBrowserRouter([
       children: [
         {
           path:'/',
-          element:<TemplateGallery> </TemplateGallery>
+          // element:<TemplateGallery> </TemplateGallery>
+          element:<MainPage></MainPage>
         },
         {
           path: 'login',
