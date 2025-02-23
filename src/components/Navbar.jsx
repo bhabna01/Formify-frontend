@@ -195,7 +195,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <div className="navbar fixed z-10 bg-opacity-30 max-w-screen-xl bg-base-300 text-black px-4 lg:px-8">
+        <div className="navbar fixed z-10 bg-opacity-30 max-w-screen-xl bg-base-300 text-black px-4 lg:px-8 ">
             <div className="flex w-full items-center justify-between gap-x-4">
                 {/* Left Section */}
                 <div className="flex items-center">

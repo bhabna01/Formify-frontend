@@ -14,6 +14,13 @@
     "theme": "Tema",
     "home": "Inicio",
     "profile": "Perfil",
-     "Dashboard": "Tablero"
-  }
-  
+    "Dashboard": "Tablero",
+    "admin_dashboard": "Tablero de administrador",
+    "user_dashboard": "Tablero de usuario",
+    "manage_users": "Administrar usuarios",
+    "manage_templates": "Administrar plantillas",
+    "review_comments": "Revisar comentarios",
+    "review_submissions": "Revisar envíos",
+    "fill_forms": "Llenar formularios",
+    "my_submissions": "Mis envíos"
+}

@@ -170,7 +170,7 @@ const CreateTemplate = () => {
           text: "Your template has been successfully created.",
           timer: 2000,
         });
-        navigate(`dashboard/templates/${res.data.template.id}`);
+        navigate(`dashboard`);
       }
     } catch (error) {
       console.error("Error creating template:", error);

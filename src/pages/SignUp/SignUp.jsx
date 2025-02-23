@@ -14,24 +14,71 @@ const SignUp = () => {
 
     
    
-    const onSubmit = data => {
+    // const onSubmit = data => {
 
+    //     createUser(data.email, data.password)
+    //         .then(result => {
+    //             const loggedUser = result.user;
+    //             console.log(loggedUser);
+    //             updateUserProfile(data.name, data.photoURL)
+    //                 .then(() => {
+    //                     // create user entry in the database
+    //                     const userInfo = {
+    //                         username: data.name,
+    //                         email: data.email,
+    //                         password: data.password
+    //                     }
+    //                     axiosPublic.post('/users', userInfo)
+    //                         .then(res => {
+    //                             if (res.data.id) {
+    //                                 console.log('user added to the database')
+    //                                 reset();
+    //                                 Swal.fire({
+    //                                     position: 'top-end',
+    //                                     icon: 'success',
+    //                                     title: 'User created successfully.',
+    //                                     showConfirmButton: false,
+    //                                     timer: 1500
+    //                                 });
+    //                                 navigate('/');
+    //                             }
+    //                         })
+    //                         .catch(error => {
+    //                             console.error('Error creating user in DB:', error);
+    
+    //                             if (error.response && error.response.data) {
+    //                                 const errorMessage = error.response.data.error;
+    
+    //                                 Swal.fire({
+    //                                     icon: 'error',
+    //                                     title: 'Oops...',
+    //                                     text: errorMessage, // Display error message from backend
+    //                                 });
+    //                             }
+    //                         });
+
+
+    //                 })
+    //                 .catch(error => console.log(error))
+    //         })
+    // };
+    const onSubmit = data => {
         createUser(data.email, data.password)
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
                 updateUserProfile(data.name, data.photoURL)
                     .then(() => {
-                        // create user entry in the database
+                        // Create user entry in the database
                         const userInfo = {
                             username: data.name,
                             email: data.email,
                             password: data.password
-                        }
+                        };
                         axiosPublic.post('/users', userInfo)
                             .then(res => {
                                 if (res.data.id) {
-                                    console.log('user added to the database')
+                                    console.log('User added to the database');
                                     reset();
                                     Swal.fire({
                                         position: 'top-end',
@@ -45,24 +92,33 @@ const SignUp = () => {
                             })
                             .catch(error => {
                                 console.error('Error creating user in DB:', error);
-    
-                                if (error.response && error.response.data) {
-                                    const errorMessage = error.response.data.error;
-    
-                                    Swal.fire({
-                                        icon: 'error',
-                                        title: 'Oops...',
-                                        text: errorMessage, // Display error message from backend
-                                    });
-                                }
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: 'Oops...',
+                                    text: error.response?.data?.error || "Something went wrong!",
+                                });
                             });
-
-
                     })
-                    .catch(error => console.log(error))
+                    .catch(error => console.log(error));
             })
+            .catch(error => {
+                console.error('Firebase Signup Error:', error);
+                if (error.code === "auth/email-already-in-use") {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Email already in use',
+                        text: 'This email is already registered. Please use another email or log in.',
+                    });
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Signup Failed',
+                        text: error.message,
+                    });
+                }
+            });
     };
-
+    
     
     
     return (
@@ -70,7 +126,7 @@ const SignUp = () => {
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left">
                         <h1 className="text-5xl font-bold">Sign up now!</h1>
-                        <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                        <p className="py-6">Create an account to start building and sharing templates effortlessly. Join us today!</p>
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
@@ -117,7 +173,7 @@ const SignUp = () => {
                                 <input className="btn btn-primary" type="submit" value="Sign Up" />
                             </div>
                         </form>
-                        <p><small>Already have an account? <Link to="/login" className="text-blue-500">Login</Link></small></p>
+                        <p className="p-3.5"><small>Already have an account? <Link to="/login" className="text-blue-500">Login</Link></small></p>
                     </div>
                 </div>
             </div>

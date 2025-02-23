@@ -8,10 +8,13 @@ import AdminRoute from "./AdminRoute";
 import PrivateRoute from "./PrivateRoute";
 import CreateTemplate from "../pages/Templates/CreateTemplate";
 import FillTemplateForm from "../pages/Templates/FillTemplateForm";
-import TemplateGallery from "../pages/Templates/TemplateGallery";
+// import TemplateGallery from "../pages/Templates/TemplateGallery";
 import ReviewSubmissions from "../pages/Templates/ReviewSubmissions";
 import ManageTemplate from "../pages/Templates/ManageTemplate";
 import MainPage from "../pages/Templates/MainPage";
+import TagSearch from "../pages/Templates/TagSearch";
+import FormSubmissionView from "../pages/Templates/FormSubmissionView";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 
 
@@ -33,6 +36,14 @@ export const router = createBrowserRouter([
           path: 'signup',
           element: <SignUp></SignUp>
         },
+        {
+          path:'search',
+          element:<TagSearch></TagSearch>
+        },
+        {
+          path:'template/:id',
+          element:<FormSubmissionView></FormSubmissionView>
+        }
         
       ]
     },
@@ -64,5 +75,9 @@ export const router = createBrowserRouter([
         }
 
       ]
-    }
+    },
+    {
+      path: '*',
+      element: <ErrorPage></ErrorPage>
+  }
   ]);
