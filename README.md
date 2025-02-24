@@ -8,6 +8,8 @@ A full-stack form building solution with advanced features like template managem
 **🌐 Live Demo**: [formify.app](https://formify-frontend-theta.vercel.app/)  
 **⚙️ Backend Repository**: [formify-backend](https://github.com/bhabna01/Formify-backend)
 
+admin credentials:admin@gmail.com,pass:Admin123#
+
 ## Features
 
 - 🛠️ Drag-and-drop form builder
@@ -97,7 +99,7 @@ npm install
 
 npm run dev
 
-#### Environment Variables
+## Environment Variables
 
 Backend .env requirements:
 
