@@ -60,46 +60,46 @@ admin credentials:admin@gmail.com,pass:Admin123#
 
 #### Backend Setup
 
-# Clone repository
+#### Clone repository
 
 git clone https://github.com/bhabna01/Formify-backend
 cd formify-backend
 
-# Install dependencies
+#### Install dependencies
 
 npm install
 
-# Configure environment variables
+#### Configure environment variables
 
 cp .env.example .env
 
-# Edit .env with your credentials
+#### Edit .env with your credentials
 
-# Database setup
+#### Database setup
 
 npx prisma migrate dev
 npx prisma generate
 
-# Start server
+#### Start server
 
 npm run dev
 
 #### Frontend Setup
 
-# Clone frontend repository
+#### Clone frontend repository
 
 git clone https://github.com/bhabna01/Formify-frontend
 cd formify-frontend
 
-# Install dependencies
+#### Install dependencies
 
 npm install
 
-# Start development server
+#### Start development server
 
 npm run dev
 
-## Environment Variables
+#### Environment Variables
 
 Backend .env requirements:
 
